@@ -77,7 +77,7 @@ public class Admin extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(320, 210, 420, 110);
+        jScrollPane1.setBounds(320, 210, 420, 80);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/resources/air_2.jpg"))); // NOI18N
         getContentPane().add(jLabel2);

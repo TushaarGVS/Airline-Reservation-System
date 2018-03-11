@@ -101,6 +101,7 @@ public class Passenger extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(100, 370, 160, 21);
 
+        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -109,6 +110,7 @@ public class Passenger extends javax.swing.JFrame {
         getContentPane().add(jTextField5);
         jTextField5.setBounds(300, 300, 290, 27);
 
+        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -154,6 +156,7 @@ public class Passenger extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(720, 530, 120, 30);
 
+        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
@@ -169,6 +172,7 @@ public class Passenger extends javax.swing.JFrame {
         getContentPane().add(jLabel10);
         jLabel10.setBounds(100, 510, 160, 21);
 
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField9ActionPerformed(evt);

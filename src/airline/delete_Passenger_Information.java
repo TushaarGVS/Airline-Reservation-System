@@ -74,6 +74,8 @@ public class delete_Passenger_Information extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(660, 420, 91, 30);
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(340, 190, 171, 27);
 

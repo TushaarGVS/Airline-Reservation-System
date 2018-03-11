@@ -101,6 +101,8 @@ public class Admin_login extends javax.swing.JFrame {
         jLabel4.setText("Login");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(130, 210, 66, 44);
+
+        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(jPasswordField1);
         jPasswordField1.setBounds(350, 350, 245, 27);
 

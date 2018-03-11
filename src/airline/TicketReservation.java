@@ -90,8 +90,12 @@ public class TicketReservation extends javax.swing.JFrame {
         jLabel7.setText("Ticket Reservation");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(60, 50, 340, 28);
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(330, 120, 100, 27);
+
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(jTextField2);
         jTextField2.setBounds(330, 170, 100, 27);
 

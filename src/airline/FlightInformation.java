@@ -50,6 +50,8 @@ public class FlightInformation extends javax.swing.JFrame {
         jLabel1.setText("Ticket Information:");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(130, 40, 290, 70);
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(460, 160, 230, 30);
 
@@ -126,7 +128,7 @@ public class FlightInformation extends javax.swing.JFrame {
                 
                 Object[][] o = {{s1, s2, s3, s4, s5, s6}} ;
                 
-                String []columnNames = {"Ticket ID", "Pasenger ID","Flight ID","Transaction ID","Seat No.", "Booking Date"};
+                String []columnNames = {"Ticket ID", "Pasenger ID","Flight ID","Transaction ID","Seat No.", "Date of Journey"};
                 DefaultTableModel defTableModel = new DefaultTableModel(o, columnNames);
                 jTable1.setModel(defTableModel) ;
                 rs.close() ;

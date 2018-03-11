@@ -65,7 +65,7 @@ public class Guest_Page extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(170, 280, 370, 140);
+        jScrollPane1.setBounds(170, 280, 370, 110);
 
         jButton2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jButton2.setText("Continue");
