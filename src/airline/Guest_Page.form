@@ -82,7 +82,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Ubuntu" size="18" style="1"/>
             </Property>
-            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor" postCode="javax.swing.DefaultListCellRenderer renderer = (javax.swing.DefaultListCellRenderer)jList1.getCellRenderer() ;&#xa;        renderer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);">
               <StringArray count="4">
                 <StringItem index="0" value="Search for Flights"/>
                 <StringItem index="1" value="Enter Passenger Information"/>

@@ -161,6 +161,7 @@ public class TicketReservation extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(630, 270, 180, 30);
 
+        ((javax.swing.JLabel)jComboBox1.getRenderer()).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(330, 280, 60, 27);
 

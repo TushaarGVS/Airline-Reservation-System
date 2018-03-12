@@ -82,7 +82,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="210" width="420" height="110"/>
+          <AbsoluteConstraints x="320" y="210" width="420" height="80"/>
         </Constraint>
       </Constraints>
 
@@ -105,9 +105,9 @@
                 <StringItem index="2" value="Delete Passenger Information"/>
               </StringArray>
             </Property>
-            <Property name="alignmentX" type="float" value="0.0"/>
           </Properties>
           <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="javax.swing.DefaultListCellRenderer renderer = (javax.swing.DefaultListCellRenderer)jList1.getCellRenderer() ;&#xa;renderer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);"/>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>

@@ -10,7 +10,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 import javax.management.Query;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import static javax.swing.SwingConstants.CENTER;
 import oracle.jdbc.pool.OracleDataSource;
 
 /**
@@ -18,11 +19,9 @@ import oracle.jdbc.pool.OracleDataSource;
  * @author tushaar
  */
 public class Passenger extends javax.swing.JFrame {
-
     /**
      * Creates new form Passenger
      */
-    private static Passenger reservationInstance = null ;
     
     public Passenger() {
         initComponents();
@@ -45,8 +44,6 @@ public class Passenger extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -54,6 +51,8 @@ public class Passenger extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -119,13 +118,6 @@ public class Passenger extends javax.swing.JFrame {
         getContentPane().add(jTextField6);
         jTextField6.setBounds(300, 440, 290, 27);
 
-        jTextArea1.setColumns(15);
-        jTextArea1.setRows(3);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(300, 190, 290, 60);
-
         jButton1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -182,12 +174,23 @@ public class Passenger extends javax.swing.JFrame {
         jTextField9.setBounds(300, 370, 290, 27);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+        ((javax.swing.JLabel)jComboBox1.getRenderer()).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(300, 500, 290, 27);
 
+        jTextPane1.setPreferredSize(new java.awt.Dimension(195, 51));
+        javax.swing.text.StyledDocument doc = jTextPane1.getStyledDocument() ;
+        javax.swing.text.SimpleAttributeSet center = new javax.swing.text.SimpleAttributeSet() ;
+        javax.swing.text.StyleConstants.setAlignment(center, javax.swing.text.StyleConstants.ALIGN_CENTER);
+        doc.setParagraphAttributes(0, doc.getLength(), center, false);
+        jScrollPane2.setViewportView(jTextPane1);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(300, 180, 290, 70);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/resources/air_27.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-10, -30, 1040, 670);
+        jLabel2.setBounds(-10, -10, 1040, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -214,7 +217,7 @@ public class Passenger extends javax.swing.JFrame {
                     passengerID = rs.getInt(1) ;
                 }
                 passengerID += 1 ;
-                Query = "insert into Passenger (passengerName, passengerID, address, mobileNumber, email, age, gender) values ('"+jTextField7.getText()+"','"+passengerID+"','"+jTextArea1.getText()+"','"+jTextField5.getText()+"','"+jTextField9.getText()+"','"+Integer.parseInt(jTextField6.getText())+"','"+jComboBox1.getSelectedItem().toString()+"')";
+                Query = "insert into Passenger (passengerName, passengerID, address, mobileNumber, email, age, gender) values ('"+jTextField7.getText()+"','"+passengerID+"','"+jTextPane1.getText()+"','"+jTextField5.getText()+"','"+jTextField9.getText()+"','"+Integer.parseInt(jTextField6.getText())+"','"+jComboBox1.getSelectedItem().toString()+"')";
                 myStat.executeUpdate(Query) ;
                 JOptionPane.showMessageDialog(null, "Your Passenger ID is " + passengerID);
             }
@@ -273,7 +276,6 @@ public class Passenger extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -295,11 +297,11 @@ public class Passenger extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -54,6 +54,7 @@ public class Select_User extends javax.swing.JFrame {
 
         jComboBox1.setFont(new java.awt.Font("Ubuntu", 0, 20)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Passenger", "Admin" }));
+        ((javax.swing.JLabel)jComboBox1.getRenderer()).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(370, 290, 170, 34);
 

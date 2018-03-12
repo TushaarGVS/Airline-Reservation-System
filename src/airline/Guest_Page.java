@@ -61,6 +61,8 @@ public class Guest_Page extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
+        javax.swing.DefaultListCellRenderer renderer = (javax.swing.DefaultListCellRenderer)jList1.getCellRenderer() ;
+        renderer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jList1.setToolTipText("");
         jScrollPane1.setViewportView(jList1);
 

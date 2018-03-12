@@ -73,7 +73,8 @@ public class Admin extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jList1.setAlignmentX(0.0F);
+        javax.swing.DefaultListCellRenderer renderer = (javax.swing.DefaultListCellRenderer)jList1.getCellRenderer() ;
+        renderer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jScrollPane1.setViewportView(jList1);
 
         getContentPane().add(jScrollPane1);

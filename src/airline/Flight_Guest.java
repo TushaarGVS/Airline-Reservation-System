@@ -61,10 +61,12 @@ public class Flight_Guest extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        ((javax.swing.JLabel)jComboBox1.getRenderer()).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(500, 190, 180, 27);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Brentwood", "Chatsworth", "Chester", "Exeter", "Kensington", "Lancaster", "Lincoln", "Manchester", "Newcastle", "Richmond", "Riverside", "Ryde", "Westminster", "Windsor" }));
+        ((javax.swing.JLabel)jComboBox2.getRenderer()).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jComboBox2);
         jComboBox2.setBounds(500, 240, 180, 27);
 
