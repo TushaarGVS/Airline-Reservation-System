@@ -115,23 +115,28 @@ public class FlightInformation extends javax.swing.JFrame {
             Statement myStat = myConn.createStatement() ;
             
             String ticketString = jTextField1.getText()  ;
-            int ticketID = Integer.parseInt(ticketString) ;
-            String query = "select * from Ticket where ticketId ='"+ticketID+"'" ;
-            try (ResultSet rs = myStat.executeQuery(query)) {
-                rs.next() ;
-                String s1 = Integer.toString(rs.getInt(1)) ;
-                String s2 = Integer.toString(rs.getInt(2)) ;
-                String s3 = Integer.toString(rs.getInt(3)) ;
-                String s4 = Integer.toString(rs.getInt(4)) ;
-                String s5 = Integer.toString(rs.getInt(5)) ;
-                String s6 = rs.getString(6) ;   
+            if(ticketString.equals("")) {
+                JOptionPane warning = new JOptionPane();
+                warning.showMessageDialog (null, "Please enter Ticket ID", "Airline", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                int ticketID = Integer.parseInt(ticketString) ;
+                String query = "select * from Ticket where ticketId ='"+ticketID+"'" ;
+                try (ResultSet rs = myStat.executeQuery(query)) {
+                    rs.next() ;
+                    String s1 = Integer.toString(rs.getInt(1)) ;
+                    String s2 = Integer.toString(rs.getInt(2)) ;
+                    String s3 = Integer.toString(rs.getInt(3)) ;
+                    String s4 = Integer.toString(rs.getInt(4)) ;
+                    String s5 = Integer.toString(rs.getInt(5)) ;
+                    String s6 = rs.getString(6) ;   
                 
-                Object[][] o = {{s1, s2, s3, s4, s5, s6}} ;
+                    Object[][] o = {{s1, s2, s3, s4, s5, s6}} ;
                 
-                String []columnNames = {"Ticket ID", "Pasenger ID","Flight ID","Transaction ID","Seat No.", "Date of Journey"};
-                DefaultTableModel defTableModel = new DefaultTableModel(o, columnNames);
-                jTable1.setModel(defTableModel) ;
-                rs.close() ;
+                    String []columnNames = {"Ticket ID", "Pasenger ID","Flight ID","Transaction ID","Seat No.", "Date of Journey"};
+                    DefaultTableModel defTableModel = new DefaultTableModel(o, columnNames);
+                    jTable1.setModel(defTableModel) ;
+                    rs.close() ;
+                }
             }
             myConn.close();
         } catch(Exception ex) {

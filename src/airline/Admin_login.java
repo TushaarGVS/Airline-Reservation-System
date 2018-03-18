@@ -120,8 +120,10 @@ public class Admin_login extends javax.swing.JFrame {
             a.setVisible(true);
             this.setVisible(false);
         } else {
-            JOptionPane WrongPassword=new JOptionPane();
-            WrongPassword.showMessageDialog (null, "Wrong Password", "", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane WrongPassword = new JOptionPane();
+            WrongPassword.showMessageDialog (null, "Incorrect Username or Password", "Airline", JOptionPane.INFORMATION_MESSAGE);
+            jTextField1.setText(null);
+            jPasswordField1.setText(null);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

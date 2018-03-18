@@ -235,9 +235,14 @@ public class TicketReservation extends javax.swing.JFrame {
                 }
                 ticketID += 1 ;
                 transactionID += 1 ;
-                Query = "insert into Ticket (ticketID, passengerID, flightID, transactionID, seatNo, bookingDate) values ('"+ticketID+"','"+Integer.parseInt(jTextField1.getText())+"','"+Integer.parseInt(jTextField2.getText())+"','"+transactionID+"','"+jComboBox1.getSelectedItem().toString()+"','"+dateChooserCombo1.getText()+"')";
-                myStat.executeUpdate(Query) ;
-                JOptionPane.showMessageDialog(null, "Your Ticket ID is " + ticketID + "\nYour Transaction ID is " + transactionID) ;
+                if(jTextField1.getText().equals("") || jTextField2.getText().equals("") || jComboBox1.getSelectedItem().toString().equals("")) {
+                    JOptionPane warning = new JOptionPane();
+                    warning.showMessageDialog (null, "Please enter Passenger ID, Flight ID and Booking Date", "Airline", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    Query = "insert into Ticket (ticketID, passengerID, flightID, transactionID, seatNo, bookingDate) values ('"+ticketID+"','"+Integer.parseInt(jTextField1.getText())+"','"+Integer.parseInt(jTextField2.getText())+"','"+transactionID+"','"+jComboBox1.getSelectedItem().toString()+"','"+dateChooserCombo1.getText()+"')";
+                    myStat.executeUpdate(Query) ;
+                    JOptionPane.showMessageDialog(null, "Your Ticket ID is " + ticketID + "\nYour Transaction ID is " + transactionID) ;
+                }
             }
         }catch(Exception e) {
                 JOptionPane.showMessageDialog(null, e);

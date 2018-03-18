@@ -217,9 +217,14 @@ public class Passenger extends javax.swing.JFrame {
                     passengerID = rs.getInt(1) ;
                 }
                 passengerID += 1 ;
-                Query = "insert into Passenger (passengerName, passengerID, address, mobileNumber, email, age, gender) values ('"+jTextField7.getText()+"','"+passengerID+"','"+jTextPane1.getText()+"','"+jTextField5.getText()+"','"+jTextField9.getText()+"','"+Integer.parseInt(jTextField6.getText())+"','"+jComboBox1.getSelectedItem().toString()+"')";
-                myStat.executeUpdate(Query) ;
-                JOptionPane.showMessageDialog(null, "Your Passenger ID is " + passengerID);
+                if(jTextField7.getText().equals("") || jTextField5.getText().equals("") || jTextField7.getText().equals("")) {
+                    JOptionPane warning = new JOptionPane();
+                    warning.showMessageDialog (null, "Please enter Passenger Name, Age and Mobile Number", "Airline", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    Query = "insert into Passenger (passengerName, passengerID, address, mobileNumber, email, age, gender) values ('"+jTextField7.getText()+"','"+passengerID+"','"+jTextPane1.getText()+"','"+jTextField5.getText()+"','"+jTextField9.getText()+"','"+Integer.parseInt(jTextField6.getText())+"','"+jComboBox1.getSelectedItem().toString()+"')";
+                    myStat.executeUpdate(Query) ;
+                    JOptionPane.showMessageDialog(null, "Your Passenger ID is " + passengerID);
+                }
             }
         }catch(Exception e) {
                 JOptionPane.showMessageDialog(null, e);
@@ -228,7 +233,7 @@ public class Passenger extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JOptionPane exit=new JOptionPane();
+        JOptionPane exit = new JOptionPane();
         exit.showMessageDialog (null, "Thanks For using\n Bon Voyage Airline Reservation System", "Airline", JOptionPane.INFORMATION_MESSAGE);
         this.setVisible(false);
         System.exit(0);
